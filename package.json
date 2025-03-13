@@ -1,25 +1,17 @@
 {
-  "name": "draggable",
+  "name": "com.hydroper.domdraggable",
   "version": "4.2.0",
   "description": "High performance, fully cross browser, full featured drag and drop in a tiny (2k gzipped), dependency-free package",
   "homepage": "http://bcherny.github.io/draggable/demos",
   "author": "Boris Cherny <boris@performancejs.com>",
-  "main": "dist/draggable.min.js",
+  "main": "src/draggable.js",
+  "type": "module",
   "contributors": [
     {
       "name": "Boris Cherny",
       "email": "boris@performancejs.com"
     }
   ],
-  "scripts": {
-    "build": "grunt"
-  },
-  "devDependencies": {
-    "grunt": "^1.0.2",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-uglify": "^3.3.0"
-  },
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {},
