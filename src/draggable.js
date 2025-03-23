@@ -255,11 +255,12 @@ util.assign (Draggable.prototype, {
     // optional styling
 
     if (options.setPosition) {
+      const rem = getRem();
       style.display = 'block';
-      style.left = _dimensions.left + 'px';
-      style.top = _dimensions.top + 'px';
-      style.width = _dimensions.width + 'px';
-      style.height = _dimensions.height + 'px';
+      style.left = (_dimensions.left / rem) + 'rem';
+      style.top = (_dimensions.top / rem) + 'rem';
+      style.width = (_dimensions.width / rem) + 'rem';
+      style.height = (_dimensions.height / rem) + 'rem';
       style.bottom = style.right = 'auto';
       style.margin = 0;
       style.position = 'absolute';
@@ -376,8 +377,9 @@ util.assign (Draggable.prototype, {
 
       dragEvent.x = pos.x;
       dragEvent.y = pos.y;
-      style.left = pos.x + 'px';
-      style.top = pos.y + 'px';
+      const rem = getRem();
+      style.left = (pos.x / rem) + 'rem';
+      style.top = (pos.y / rem) + 'rem';
 
       return true;
     }
@@ -520,10 +522,10 @@ util.assign (Draggable.prototype, {
     var me = this,
       element = me.element,
       style = element.style;
-
+    const rem = getRem();
     util.assign(me._dimensions, {
-      left: parse(style.left) || element.offsetLeft,
-      top: parse(style.top) || element.offsetTop
+      left: (parse(style.left) * rem) || element.offsetLeft,
+      top: (parse(style.top) * rem) || element.offsetTop
     });
 
   },
@@ -597,3 +599,15 @@ function isFunction (thing) {
 }
 
 function noop (){};
+
+function getRem() {
+  const sizeMatch = window
+      .getComputedStyle(document.body.parentElement)
+      .getPropertyValue('font-size')
+      .match(/^(\d*\.?\d*)px$/);
+
+  if (!sizeMatch || sizeMatch.length < 1) return 0;
+
+  const result = Number(sizeMatch[1]);
+  return !isNaN(result) ? result : 0;
+}
