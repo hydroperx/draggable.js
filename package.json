@@ -1,6 +1,6 @@
 {
   "name": "com.hydroper.draggable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "High performance, fully cross browser, full featured drag and drop in a tiny (2k gzipped), dependency-free package",
   "author": "Boris Cherny <boris@performancejs.com>",
   "main": "src/draggable.js",
