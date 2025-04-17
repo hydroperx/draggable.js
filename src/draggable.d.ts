@@ -111,8 +111,17 @@ export type DraggableOptions = {
      */
     useGPU?: boolean,
 
+    /**
+     * Event dispatched when drag moves.
+     */
     onDrag?: (element: Element, x: number, y: number, event: Event) => void,
+    /**
+     * Event dispatched when drag starts.
+     */
     onDragStart?: (element: Element, x: number, y: number, event: Event) => void,
+    /**
+     * Event dispatched when drag stops.
+     */
     onDragEnd?: (element: Element, x: number, y: number, event: Event) => void,
 };
 
