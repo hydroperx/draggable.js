@@ -144,7 +144,7 @@ export default class Draggable {
     /**
      * Sets an option in the live instance.
      */
-    setOption(property: string, value: any): void;
+    setOption<K extends keyof DraggableOptions>(property: K, value: DraggableOptions[K]): void;
 
     /**
      * Unbinds the instance's DOM event listeners.
