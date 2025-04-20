@@ -1,10 +1,10 @@
-# com.hydroper.draggable
+# @hydroper/draggable
 
 High performance, fully cross browser, full featured drag and drop in a tiny (2k gzipped), dependency-free package.
 
 > **Note:**
 >
-> com.hydroper.draggable is a modified copy of [`bcherny/draggable`](https://github.com/bcherny/draggable) v4. Credits to that original repository.
+> @hydroper/draggable is a modified copy of [`bcherny/draggable`](https://github.com/bcherny/draggable) v4. Credits to that original repository.
 
 ## Usage
 
@@ -17,7 +17,7 @@ High performance, fully cross browser, full featured drag and drop in a tiny (2k
 **TypeScript**
 
 ```js
-import Draggable from "com.hydroper.draggable";
+import Draggable from "@hydroper/draggable";
 let element = document.getElementById("id");
 new Draggable(element);
 ```
