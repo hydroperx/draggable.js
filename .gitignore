@@ -1,2 +1,5 @@
-.DS_Store
-node_modules
+# ignore NPM artifacts
+/node_modules
+
+# ignore NPM lockfile
+/package-lock.json
