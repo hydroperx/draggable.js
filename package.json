@@ -1,13 +1,13 @@
 {
   "name": "@hydroperx/draggable",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "High performance, fully cross browser, full featured drag and drop in a tiny (2k gzipped), dependency-free package",
   "author": "Boris Cherny <boris@performancejs.com>",
   "files": ["/src"],
   "exports": {
     ".": {
-      "default": "./src/draggable.js",
-      "types": "./src/draggable.d.ts"
+      "types": "./src/draggable.d.ts",
+      "default": "./src/draggable.js"
     }
   },
   "type": "module",
