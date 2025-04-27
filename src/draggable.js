@@ -27,6 +27,10 @@ var env = {
   // CSS vendor-prefixed transform property
   transform: (function(){
 
+    if (typeof window === "undefined") {
+      return "transform";
+    }
+
     var prefixes = ' -o- -ms- -moz- -webkit-'.split(' ');
     var style = document.body.style;
 
